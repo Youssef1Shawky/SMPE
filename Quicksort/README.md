@@ -122,7 +122,7 @@ bash scripts/run_benchmarking_improved.sh && Rscript analysis.R
 
 ### Final Visualization
 
-![Quicksort Performance Comparison](./data/performance_analysis_final.png)
+![Quicksort Performance Comparison](./data/Youssef_2025-10-19//performance_analysis_final.png)
 
 *Figure: Performance comparison of three quicksort implementations with 95% confidence intervals (shaded bands) and continuous trend lines fitted using LOESS regression.*
 
