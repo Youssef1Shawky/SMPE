@@ -43,7 +43,7 @@ done
 for i in 1000 5000 10000 50000 100000 200000 500000 1000000; do
 ```
 - **Benefit:** More intermediate points allow detection of performance crossover points and smoother trend estimation.
-- **Trade-off:** Runtime scales reasonably (~40-50 minutes total with 30 reps).
+- **Trade-off:** Runtime scales reasonably .
 
 ### 3. **Added 1-Second Sleep Between Runs**
 ```bash
@@ -164,21 +164,8 @@ The analysis should reveal:
 3. Fit smooth trend lines using LOESS regression
 4. Visualize with ggplot2
 
-## Key Takeaways
-
-This assignment demonstrates:
-- ✓ Why experimental methodology matters for reliable results
-- ✓ How to design benchmarks with statistical rigor
-- ✓ Importance of multiple repetitions and fine-grained parameter ranges
-- ✓ Using visualization (ggplot2) to communicate results clearly
-- ✓ Interpreting confidence intervals to assess result reliability
-
 ## References
 
-- Original implementation: http://sc12.supercomputing.org/hpceducator/PythonForParallelism/codes/parallelQuicksort.c
+- Original implementation: https://github.com/alegrand/M2R-ParallelQuicksort
 - Laboratory notebook framework: Arnaud Legrand's M2R-ParallelQuicksort project
 - R visualization: ggplot2 documentation
-
-## Author Notes
-
-This assignment was completed as part of a performance evaluation course. The primary learning outcome is understanding how experimental design choices directly impact the quality and interpretability of scientific results.
