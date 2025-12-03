@@ -65,9 +65,7 @@ print(summary_stats)
 
 plot <- ggplot(summary_stats, aes(x = size, y = mean_time, color = algorithm, fill = algorithm)) +
   
-  geom_ribbon(aes(ymin = ci_lower, ymax = ci_upper, color = NA), alpha = 0.2) +
-  
-  geom_smooth(method = "loess", se = FALSE, linewidth = 1.2, span = 0.8) +
+  geom_smooth(method = "loess", se = TRUE, linewidth = 1.2, span = 0.8, alpha = 0.2) +
   
   geom_point(size = 3, alpha = 0.8) +
   
@@ -83,9 +81,9 @@ plot <- ggplot(summary_stats, aes(x = size, y = mean_time, color = algorithm, fi
   
   labs(
     title = "Quicksort Performance Comparison",
-    subtitle = "With 95% Confidence Intervals and Continuous Trends",
-    x = "Array Size (elements)",
-    y = "Time (seconds)",
+    subtitle = "LOESS smoothing with 95% confidence bands on log-log scale",
+    x = "Array Size (log scale, elements)",
+    y = "Execution Time (log scale, seconds)",
     color = "Algorithm",
     fill = "Algorithm"
   ) +

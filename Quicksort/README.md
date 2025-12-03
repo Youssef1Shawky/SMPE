@@ -135,13 +135,15 @@ The improved analysis includes:
    - If intervals don't overlap between algorithms, the difference is statistically significant
 
 2. **Continuous Trend Lines**
-   - Smooth curves (LOESS regression) fitted through the data
+   - Smooth curves (LOESS regression) fitted through the data with their own confidence bands
    - Reveals underlying performance patterns beyond individual measurement noise
    - Enables visual identification of performance crossover points
+   - Note: The confidence bands reflect the uncertainty in the fitted curve itself, not the raw measurement variability
 
 3. **Logarithmic Scaling**
-   - Both axes use log scale (appropriate for O(n log n) algorithms)
-   - Makes trends more visible across orders of magnitude
+   - Both X-axis (array size) and Y-axis (execution time) use logarithmic scale
+   - **Rationale:** Quicksort has O(n log n) complexity, meaning execution time grows proportionally to n × log(n). On a log-log plot, this appears as a straight line with slope ≈ 1, making performance trends easier to visualize and compare across multiple orders of magnitude (from 1,000 to 1,000,000 elements)
+   - Makes it easier to identify deviations from expected algorithmic complexity
 
 ### Expected Findings
 
